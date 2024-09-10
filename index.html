@@ -3,70 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>数字梦幻乌托邦</title>
+    <title>公司网站</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">我的公司</div>
             <ul class="nav-links">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="about.html">关于我们</a></li>
-                <li><a href="products.html">产品</a></li>
+                <li><a href="index.html">网站首页</a></li>
+                <li><a href="about.html">公司简介</a></li>
+                <li><a href="products.html">产品展示</a></li>
                 <li><a href="contact.html">联系我们</a></li>
+                <li id="user-info">请登录</li>
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <h1>数字梦幻乌托邦</h1>
-        <p>打造智能未来，共享绿色生活</p>
-        <a href="products.html" class="btn">了解更多</a>
-    </section>
-    <section class="about-us">
-        <h2>关于我们</h2>
-        <p>我们是一家致力于智能科技与环保事业的公司...</p>
-        <a href="about.html" class="btn">了解更多</a>
-    </section>
-    <section class="products">
-        <h2>我们的产品</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="assets/images/product1.jpg" alt="产品1">
-                <h3>产品1</h3>
-                <p>简短描述...</p>
-            </div>
-            <div class="product-item">
-                <img src="assets/images/product2.jpg" alt="产品2">
-                <h3>产品2</h3>
-                <p>简短描述...</p>
-            </div>
-            <div class="product-item">
-                <img src="assets/images/product3.jpg" alt="产品3">
-                <h3>产品3</h3>
-                <p>简短描述...</p>
-            </div>
+
+    <div class="hero-section">
+        <div class="overlay">
+            <h1>欢迎来到我们的网站</h1>
+            <p>致力于提供优质的产品和服务</p>
+            <button onclick="window.location.href='products.html'">浏览产品</button>
         </div>
-    </section>
-    <section class="testimonials">
-        <h2>客户评价</h2>
-        <div class="testimonial-item">
-            <p>“这个产品非常出色！” - 客户A</p>
-        </div>
-        <div class="testimonial-item">
-            <p>“我们对服务非常满意！” - 客户B</p>
-        </div>
-    </section>
-    <footer>
-        <div class="footer-info">
-            <p>© 2024 我的公司. 保留所有权利。</p>
-            <ul class="social-links">
-                <li><a href="#">微博</a></li>
-                <li><a href="#">微信</a></li>
-                <li><a href="#">LinkedIn</a></li>
+    </div>
+
+    <div class="container">
+        <section class="company-info">
+            <h2>公司简介</h2>
+            <img src="assets/images/company-photo.jpg" alt="公司图片">
+            <p>我们是一家致力于绿色健康食品的企业，提供优质的产品和服务...</p>
+        </section>
+
+        <section class="video-section">
+            <h2>企业视频</h2>
+            <img src="assets/images/video-placeholder.jpg" alt="视频预览">
+        </section>
+
+        <section class="auth-section">
+            <h2>会员专区</h2>
+            <div id="auth-forms">
+                <div id="login-form">
+                    <h3>登录</h3>
+                    <input type="text" id="login-username" placeholder="用户名">
+                    <input type="password" id="login-password" placeholder="密码">
+                    <button onclick="login()">登录</button>
+                </div>
+                <div id="register-form">
+                    <h3>注册</h3>
+                    <input type="text" id="register-username" placeholder="用户名">
+                    <input type="password" id="register-password" placeholder="密码">
+                    <button onclick="register()">注册</button>
+                </div>
+            </div>
+            <div id="member-content" style="display:none;">
+                <h3>会员专属内容</h3>
+                <p>这里是只有登录会员才能看到的内容。</p>
+            </div>
+        </section>
+
+        <aside class="contact-info">
+            <h3>联系我们</h3>
+            <p>电话: 123-456-7890</p>
+            <p>邮箱: info@company.com</p>
+            <p id="address">地址: 正在加载中...</p>
+        </aside>
+
+        <aside class="product-nav">
+            <h3>产品导航</h3>
+            <ul>
+                <li><a href="product-category1.html">产品类别1</a></li>
+                <li><a href="#">产品类别2</a></li>
+                <li><a href="#">产品类别3</a></li>
+                <li><a href="#">产品类别4</a></li>
             </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <div class="link-section">
+                <h4>代理区</h4>
+                <p>代理信息...</p>
+                <a href="#">了解更多</a>
+            </div>
+            <div class="link-section">
+                <h4>批发区</h4>
+                <p>批发信息...</p>
+                <a href="#">了解更多</a>
+            </div>
         </div>
+        <p>© 2024 公司名称. 保留所有权利. 地址: <span id="footer-address">深圳市南山区</span>, 电话: 123-456-7890</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
